@@ -1,0 +1,36 @@
+{
+  "branches": [
+    "master"
+  ],
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      { "preset": "conventionalcommits" }
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      { "preset": "conventionalcommits" }
+    ],
+    [
+      "@semantic-release/changelog",
+      { "changelogFile": "CHANGELOG.md" }
+    ],
+    [
+      "@semantic-release/git",
+      { "assets": "CHANGELOG.md" }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "path": "semantic-release",
+        "name": "${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}"
+      }
+    ],
+		[
+      "@semantic-release/npm",
+      {
+        "npmPublish": true
+      }
+    ]
+  ]
+}

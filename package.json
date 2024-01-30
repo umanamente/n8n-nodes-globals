@@ -1,28 +1,31 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "n8n-nodes-globals",
   "version": "0.1.0",
-  "description": "",
+  "description": "N8N community node that allows users to create global constants and use them in all their workflows",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Vasily Maslyukov",
+    "email": "auro.coding@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/umanamente/n8n-nodes-globals.git"
   },
   "main": "index.js",
   "scripts": {
     "build": "tsc && gulp build:icons",
     "dev": "tsc --watch",
+    "run-dev": "npm run build && cross-env N8N_LOG_LEVEL=debug n8n start",
+    "run-dev-tunnel": "npm run build && cross-env N8N_LOG_LEVEL=debug n8n start --tunnel",
     "format": "prettier nodes credentials --write",
     "lint": "eslint nodes credentials package.json",
     "lintfix": "eslint nodes credentials package.json --fix",
-    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json"
+    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json",
+    "semantic-release": "semantic-release"
   },
   "files": [
     "dist"
@@ -30,23 +33,28 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/credentials/GlobalConstantsCredentials.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/GlobalConstants/GlobalConstants.node.js"
     ]
   },
   "devDependencies": {
-    "@types/express": "^4.17.6",
-    "@types/request-promise-native": "~1.0.15",
-    "@typescript-eslint/parser": "~5.45",
-    "eslint-plugin-n8n-nodes-base": "^1.11.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^11.0.2",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "@types/express": "^4.17.21",
+    "@types/request-promise-native": "~1.0.21",
+    "@typescript-eslint/parser": "~6.20",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "cross-env": "^7.0.3",
+    "eslint-plugin-n8n-nodes-base": "^1.16.1",
     "gulp": "^4.0.2",
     "n8n-core": "*",
     "n8n-workflow": "*",
-    "prettier": "^2.7.1",
-    "typescript": "~4.8.4"
+    "prettier": "^3.2.4",
+    "semantic-release": "^23.0.0",
+    "typescript": "~5.3.3"
   }
 }
