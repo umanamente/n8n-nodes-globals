@@ -16,8 +16,25 @@
       { "changelogFile": "CHANGELOG.md" }
     ],
     [
+      "semantic-release-replace-plugin",
+      {
+        "replacements": [
+          {
+            "files": ["package.json"],
+            "from": "\"version\": \".*\"",
+            "to": "\"version\": \"${nextRelease.version}\""
+          }
+        ]
+      }
+    ],
+    [
       "@semantic-release/git",
-      { "assets": "CHANGELOG.md" }
+      {
+        "assets": [
+          "CHANGELOG.md",
+          "package.json"
+        ]
+      }
     ],
     [
       "@semantic-release/github",
@@ -26,7 +43,7 @@
         "name": "${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}"
       }
     ],
-		[
+    [
       "@semantic-release/npm",
       {
         "npmPublish": true
