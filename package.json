@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-globals",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "N8N community node that allows users to create global constants and use them in all their workflows",
   "keywords": [
     "n8n-community-node-package"
