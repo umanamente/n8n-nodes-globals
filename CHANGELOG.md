@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/umanamente/n8n-nodes-globals/compare/v1.0.1...v1.0.2) (2024-10-18)
+
+
+### Bug Fixes
+
+* rebuild package to fix icon ([015dbe9](https://github.com/umanamente/n8n-nodes-globals/commit/015dbe9487bac31179ac87dde89fbacee19a5da2))
+
 ## [1.0.1](https://github.com/umanamente/n8n-nodes-globals/compare/v1.0.0...v1.0.1) (2024-08-16)
 
 
