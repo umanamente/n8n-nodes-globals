@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/umanamente/n8n-nodes-globals/compare/v1.0.2...v1.0.3) (2024-10-18)
+
+
+### Bug Fixes
+
+* downgrade gulp to 4.0.2 to resolve corrupted PNG output in v5.0.0 ([8213563](https://github.com/umanamente/n8n-nodes-globals/commit/82135639d60c119ef1c3ea314bd1fd15523d7c93))
+
 ## [1.0.2](https://github.com/umanamente/n8n-nodes-globals/compare/v1.0.1...v1.0.2) (2024-10-18)
 
 
