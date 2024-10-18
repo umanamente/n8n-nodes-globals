@@ -4,7 +4,7 @@ This is an n8n community node. It lets you create global constants that can be u
 
 * [Installation](#installation)  
 * [Usage](#usage)
-* [Version history](CHANGELOG.md)
+* [Version history](CHANGELOG.md)  
 
 ## Installation
 
