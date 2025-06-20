@@ -17,9 +17,16 @@ This node uses N8N Credential to store the global variables.
 1. Add "`Global Constants`" node to your workflow.
    ![Global Constants node](./docs/images/usage/1_select_node.png)
 2. In the node configuration, either select an existing credential or create a new one.
-3. Add the key-value pairs you want to use as global constants.
-   ![Define constants](./docs/images/usage/2_define_constants.png)
-4. Use the global constants in your workflow
-	 ![Use constants](./docs/images/usage/3_use_node.png)
+3. Select the format for your global constants:
+   - Key-value pairs format: Use "name=value" pairs, one per line
+   - JSON format: Provide constants as a JSON object
+4. Add your constants according to the chosen format:
+   
+   KeyKey-value pairs
+   ![Define constants String](./docs/images/usage/2_define_constants_string.png)
 
+   JSON
+   ![Define constants](./docs/images/usage/2_define_constants_json.png)
+5. Use the global constants in your workflow
+   ![Use constants](./docs/images/usage/3_use_node.png)
 
