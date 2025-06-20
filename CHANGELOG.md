@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/umanamente/n8n-nodes-globals/compare/v1.0.3...v1.1.0) (2025-06-20)
+
+
+### Features
+
+* added support for JSON format in global constants input ([6e720e6](https://github.com/umanamente/n8n-nodes-globals/commit/6e720e623abd92c6e6862935b4adfe88357002f3))
+
 ## [1.0.3](https://github.com/umanamente/n8n-nodes-globals/compare/v1.0.2...v1.0.3) (2024-10-18)
 
 
