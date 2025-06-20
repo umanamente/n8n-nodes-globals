@@ -10,6 +10,23 @@ export class GlobalConstantsCredentials implements ICredentialType {
 
 	properties: INodeProperties[] = [
 		{
+			displayName: 'Format',
+			name: 'format',
+			type: 'options',
+			options: [
+				{
+					name: 'Key-value pairs',
+					value: 'string',
+				},
+				{
+					name: 'JSON',
+					value: 'json',
+				},
+			],
+			default: 'string',
+			description: 'Choose the format for your global constants',
+		},
+		{
 			displayName: 'Global Constants',
 			name: 'globalConstants',
 			type: 'string',
@@ -19,10 +36,28 @@ export class GlobalConstantsCredentials implements ICredentialType {
 			typeOptions: {
 				rows: 10,
 			},
+			displayOptions: {
+				show: {
+					format: ['string'],
+				},
+			},
+		},
+		{
+			displayName: 'Global Constants',
+			name: 'globalConstants',
+			type: 'json',
+			default: '{}',
+			hint: 'Provide your constants as a JSON object. Example: { "obj": { "key": "value" }, "list": ["value1", "value2"] }',
+			displayOptions: {
+				show: {
+					format: ['json'],
+				},
+			},
 		},
 	];
 }
 
 export interface GlobalConstantsCredentialsData {
+	format: 'string' | 'json';
 	globalConstants: string;
 }
