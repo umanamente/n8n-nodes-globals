@@ -3,7 +3,6 @@ import { splitConstants } from '../credentials/CredentialsUtils';
 describe('CredentialsUtils', () => {
   describe('splitConstants', () => {
     it('should split constants correctly (trivial case)', () => {
-      // TODO: Fill in the input string
       const input = `
 CONSTANT1=value1
 CONSTANT2=value2
@@ -12,7 +11,6 @@ CONSTANT3=value3
 
       const result = splitConstants(input);
 
-      // TODO: Fill in expected values
       expect(result).toEqual({
         CONSTANT1: 'value1',
         CONSTANT2: 'value2',
