@@ -13,6 +13,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     permissions:
+      checks: write # for jest-coverage-report
       contents: read # for checkout
       pull-requests: write # for jest-coverage-report
     steps:
