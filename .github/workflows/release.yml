@@ -36,7 +36,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           skip-step: install
-          test-script: npm run test:coverage
+          test-script: npm test -- --coverage
       - name: Build and test
         run: npm run prepublishOnly
 
