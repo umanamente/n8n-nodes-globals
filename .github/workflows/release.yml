@@ -6,7 +6,7 @@ on:
   pull_request:
 
 permissions:
-  contents: read
+  contents: write
   checks: write
   pull-requests: write
 
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       checks: write # for jest-coverage-report
-      contents: read # for checkout
+      contents: write # for checkout
       pull-requests: write # for jest-coverage-report
     steps:
       - name: Checkout
