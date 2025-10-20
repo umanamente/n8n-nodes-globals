@@ -2,7 +2,8 @@ name: Release
 on:
   push:
     branches:
-      - master
+      - '**'
+  pull_request:
 
 permissions:
   contents: read # for checkout
@@ -26,6 +27,8 @@ jobs:
         run: npm clean-install
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
+      - name: Run tests with coverage
+        run: npm run test:coverage
       - name: Build and test
         run: npm run prepublishOnly
 
@@ -53,6 +56,8 @@ jobs:
         run: npm clean-install
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
+      - name: Run tests with coverage
+        run: npm run test:coverage
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
